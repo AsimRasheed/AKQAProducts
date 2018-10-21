@@ -1,0 +1,27 @@
+<div class="row flex">
+    <div class="col l12 m12 s12">
+        <img src="/assets/Products/{{product.productImage}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col l12 m12 s12">
+        <div *ngIf="product.isSale" class="features features-sale">
+            <div>
+                Sale
+            </div>
+        </div>
+        <div *ngIf="product.isExclusive" class="features features-exclusive">
+            <div>
+                Exclusive
+            </div>
+        </div>
+        <div *ngIf="!product.isExclusive && !product.isSale" class="features">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col l12 m12 s12 footer">
+        <div>{{product.productName}}</div>
+        <div class="footer-price">{{product.price}}</div>
+    </div>
+</div>

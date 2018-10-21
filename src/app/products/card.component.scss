@@ -1,0 +1,56 @@
+@import '../../assets/scss/colors.scss';
+
+:host {
+    display: block;
+    height: 320px;    
+    background-color: $white;
+    border: 1px solid $color_border;
+
+    img{
+        max-width: 192px;
+    }
+  }
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features{
+    @extend .flex;
+    margin-left: 10px; 
+    margin-top: 10px;
+    height: 40px;
+    color: $white;
+    font-family: "Arial";
+    font-size: 16px;
+
+    &-sale{
+        background-color: $bgColor_feature_sale;
+        width: 50px;
+    }
+    &-exclusive{
+        background-color: $bgColor_feature_exclusive;
+        width: 100px;       
+    }    
+}
+
+.footer{
+    @extend .flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+    word-wrap: break-word;    
+    color: $txtColor_footer;
+    font-family: "Arial";
+    font-weight: bold;
+    margin-left: 10px;
+   
+    &-price{
+        font-size: 20px;
+        padding-right: 10px;
+    }
+}

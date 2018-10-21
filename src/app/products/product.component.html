@@ -1,0 +1,20 @@
+<div style="text-align:center">
+    <h1>Welcome to {{ title }}!</h1>
+</div>
+
+<div class="row">
+    <div class="flex">
+        <span>Women's tops</span>
+        <div>
+            <select (change)="selectChange($event.target.value)" style="border-radius: 10px;">
+                <option [value]="size.key" *ngFor="let size of productSizes">{{ size.value }}</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col l3 m6 s12" *ngFor="let product of filteredProducts">
+        <card [product]=product class="cardListItem"></card>
+    </div>
+</div>
